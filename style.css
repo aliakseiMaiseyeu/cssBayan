@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #f5f5eb;
+}
+
+.bayan {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  max-height: 1080px;
+  margin: 0 auto;
+  padding: 0 50px 0 50px;
+}
+
+.bayan_item {
+  height: 100%;
+  text-align: center;
+}
+h1 {
+  padding: 20px 0 20px 0;
+}
+h3 {
+  padding: 20px 0 20px 0;
+  text-align: start;
+}
+img {
+  padding-bottom: 30px;
+  height: auto;
+  width: 400px;
+}
