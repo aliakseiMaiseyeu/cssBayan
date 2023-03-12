@@ -30,40 +30,50 @@ h3 {
   text-align: start;
 }
 img {
-  display: none;
   padding-bottom: 30px;
   height: auto;
   width: 400px;
 }
 
 .bayan_elem {
-  display: flex;
+  display: flexbox;
   justify-content: space-between;
 }
+.bayan:not(:nth-child(5)) img {
+  display: none;
+}
 
-.bayan_plus {
-  opacity: 0;
+.bayan_item:hover img {
+  display: inline-block;
+  transition: 3s;
+}
+
+.bayan_title {
+  display: block;
+  text-align: start;
   position: relative;
-  width: 20px;
-  height: 20px;
-  margin: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
+  font-size: 20px;
 }
-.bayan:hover .bayan_plus {
-  opacity: 1;
+.bayan_title::before {
+  content: "\FF0B";
+  float: right;
+  color: black;
+  font-size: 20px;
 }
-.bayan_plus-lineV {
-  background: #000;
-  height: 20px;
-  width: 4px;
+
+.bayan_input:checked + .bayan_title:before {
+  transition: transform 0.25s;
+  transform: rotate(45deg);
+}
+.bayan_input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
   position: absolute;
-  left: 8px;
 }
-.bayan_plus-lineH {
-  content: "";
-  height: 4px;
-  width: 20px;
-  background: #000;
-  position: absolute;
-  left: 0px;
-  top: 8px;
+
+.bayan_input:checked ~ .bayan_img {
+  display: block;
 }
