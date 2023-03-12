@@ -12,6 +12,10 @@
   margin: 0 auto;
   margin: 0 50px 0 50px;
   cursor: pointer;
+  color: blue;
+}
+.bayan:hover {
+  color: black;
 }
 
 .bayan_item {
@@ -38,10 +42,14 @@ img {
 }
 
 .bayan_plus {
+  opacity: 0;
   position: relative;
   width: 20px;
   height: 20px;
   margin: 20px 0 20px 0;
+}
+.bayan:hover .bayan_plus {
+  opacity: 1;
 }
 .bayan_plus-lineV {
   background: #000;
