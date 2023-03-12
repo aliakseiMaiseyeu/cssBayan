@@ -10,7 +10,8 @@
   max-width: 1920px;
   max-height: 1080px;
   margin: 0 auto;
-  padding: 0 50px 0 50px;
+  margin: 0 50px 0 50px;
+  cursor: pointer;
 }
 
 .bayan_item {
@@ -25,7 +26,36 @@ h3 {
   text-align: start;
 }
 img {
+  display: none;
   padding-bottom: 30px;
   height: auto;
   width: 400px;
+}
+
+.bayan_elem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bayan_plus {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 20px 0 20px 0;
+}
+.bayan_plus-lineV {
+  background: #000;
+  height: 20px;
+  width: 4px;
+  position: absolute;
+  left: 8px;
+}
+.bayan_plus-lineH {
+  content: "";
+  height: 4px;
+  width: 20px;
+  background: #000;
+  position: absolute;
+  left: 0px;
+  top: 8px;
 }
