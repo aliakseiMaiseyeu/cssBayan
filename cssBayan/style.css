@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #f5f5eb;
+}
+
+.bayan {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  max-height: 1080px;
+  margin: 0 90px 90px 90px;
+  cursor: pointer;
+  color: blue;
+}
+.bayan:hover {
+  color: black;
+}
+
+.bayan_item {
+  height: 100%;
+  text-align: center;
+}
+h1 {
+  padding: 20px 0 20px 0;
+  font-size: 60px;
+}
+img {
+  margin-bottom: 30px;
+  height: auto;
+  width: 500px;
+  padding: 0 80px 0 80px;
+}
+
+.bayan_elem {
+  display: flexbox;
+  justify-content: space-between;
+}
+.bayan img {
+  display: none;
+}
+
+.bayan_item:hover img {
+  display: inline-block;
+
+  animation-name: appear;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.bayan_elem label:hover {
+  max-width: 1920px;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bayan_title {
+  display: block;
+  text-align: start;
+  position: relative;
+  padding: 20px 0 20px 0;
+  font-size: 40px;
+}
+.bayan_title::before {
+  opacity: 0;
+  content: "\FF0B";
+  float: right;
+  color: black;
+  font-size: 40px;
+  vertical-align: top;
+}
+.bayan:hover .bayan_title::before {
+  opacity: 1;
+}
+.bayan_input:checked + .bayan_title:before,
+.bayan_elem:hover .bayan_title::before {
+  transition: transform 0.25s;
+  transform: rotate(45deg);
+}
+.bayan_input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.bayan_input:checked ~ .bayan_title {
+  color: black;
+}
+.bayan_input:checked ~ .bayan_img {
+  display: inline-block;
+}
+
+@media screen and (max-width: 820px) {
+  h1 {
+    padding: 20px 0 20px 0;
+    font-size: 50px;
+  }
+
+  img {
+    margin-bottom: 30px;
+    height: auto;
+    width: 400px;
+    padding: 0 80px 0 80px;
+  }
+
+  .bayan_title {
+    display: block;
+    text-align: start;
+    position: relative;
+    padding: 20px 0 20px 0;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bayan {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 30px 30px;
+  }
+  h1 {
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+  }
+
+  img {
+    margin-bottom: 30px;
+    height: auto;
+    width: 200px;
+    padding: 0 10px 0 10px;
+  }
+
+  .bayan_title {
+    display: block;
+    text-align: start;
+    position: relative;
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+  }
+  .bayan_title::before {
+    font-size: 20px;
+  }
+}
